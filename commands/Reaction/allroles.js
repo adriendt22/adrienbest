@@ -2,10 +2,10 @@ const { MessageEmbed } = require ("discord.js");
 const { FOOTER, FOOTERI } = require('./../../config');
 
 module.exports.run = (client, message, args) => {
-  const bobSpeedRole = message.guild.roles.cache.get("788424588295274577");
-  const alienWarRole = message.guild.roles.cache.get("788424790976757760");
-  const bobSpeedEmoji = message.guild.emojis.cache.get("679262066875301899");
-  const alienWarEmoji = message.guild.emojis.cache.get("783673502858870794");
+  const bobSpeedRole = message.guild.roles.cache.get("788116884867776522");
+  const alienWarRole = message.guild.roles.cache.get("788117323260755968");
+  const bobSpeedEmoji = message.guild.emojis.cache.get("788404145329668186");
+  const alienWarEmoji = message.guild.emojis.cache.get("788415821692928052");
 
   const embed = new MessageEmbed()
     .setTitle("Rôles")
