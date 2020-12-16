@@ -1,5 +1,5 @@
 const { Client, Collection, MessageEmbed } = require('discord.js');
-const { TOKEN, HOST, PORT, GAME } = require('./config');
+const { TOKEN } = require('./config');
 const { readdirSync } = require("fs");
 const Gamedig = require('gamedig');
 const fivereborn = require("fivereborn-query");
@@ -36,9 +36,9 @@ const loadEvents = (dir = "./events/") => {
 client.on('ready', () => {
   let interval = setInterval(function() {
       Gamedig.query({
-          type: GAME,
-          host: HOST,
-          port: PORT
+          type: "fivem",
+          host: "127.0.0.1",
+          port: "30120"
       }).then((state) => {
           client.user.setActivity(`${state.players.length} / ${state.maxplayers} Habitants En Ville`, {
               type: 'WATCHING'
