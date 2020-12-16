@@ -20,7 +20,7 @@ module.exports.run = (client, message, args) => {
     `
   );
 
-  client.channels.cache.get('762733000176959518').send(embed).then(async msg => {
+  client.channels.cache.get('784473250167521330').send(embed).then(async msg => {
     await msg.react(bobSpeedEmoji);
     await msg.react(alienWarEmoji);
   })
