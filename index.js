@@ -33,4 +33,4 @@ const loadEvents = (dir = "./events/") => {
 loadCommands();
 loadEvents();
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
