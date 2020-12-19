@@ -6,7 +6,7 @@ module.exports = (client, member) => {
   const embed = new MessageEmbed()
     .setAuthor(member.user.username, member.user.displayAvatarURL())
     .setColor("#dc143c")
-    .setTitle(`Arrache ta mère de ${member.guild.name} mec t'es trop nul ${member.user.tag}.\n Nous sommes désormais ${member.guild.memberCount} membres`)
+    .setTitle(`Arrache ta mère de ${member.guild.name} mec t'es trop nul ${member.user.tag}.\nNous sommes désormais ${member.guild.memberCount} membres`)
     .setThumbnail("https://i.imgur.com/HNfSGe9.png")
     .setTimestamp()
     .setFooter(FOOTER, FOOTERI);
