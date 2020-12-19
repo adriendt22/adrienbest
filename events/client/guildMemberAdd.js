@@ -3,7 +3,7 @@ const { FOOTER, FOOTERI } = require("../../config");
 
 module.exports = (client, member) => {
   const embed = new MessageEmbed()
-  .setTitle(`Bienvenue ${member.user.username} sur ${member.guild.name}.\n Nous sommes désormais ${member.guild.memberCount} membres`)
+  .setTitle(`Bienvenue ${member.user.username} sur ${member.guild.name}.\nNous sommes désormais ${member.guild.memberCount} membres`)
   .setColor("#A210EB")
   .setThumbnail("https://i.imgur.com/HNfSGe9.png")
   .setFooter(FOOTER, FOOTERI)
