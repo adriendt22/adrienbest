@@ -23,12 +23,12 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(message.author.username, message.author.avatarURL())
     .setColor("#0AFFF8")
     .setDescription(`**Action**: prune\n**Nbr de message**: ${args[1]}\n**Utilisateur**: ${args[0]}`)
-    .setThumbnail("https://i.imgur.com/qTbMAHy.png")
+    .setThumbnail("https://i.imgur.com/HNfSGe9.png")
     .setFooter(FOOTER, FOOTERI);
 
     message.delete();
 
-    client.channels.cache.get('681130401040695303').send(embed);
+    client.channels.cache.get('788716620418646036').send(embed);
 
 };
 

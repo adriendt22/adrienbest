@@ -1,12 +1,9 @@
-const { Client, Collection, MessageEmbed } = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const { TOKEN } = require('./config');
 const { readdirSync } = require("fs");
-const Gamedig = require('gamedig');
-const fivereborn = require("fivereborn-query");
 
 const client = new Client();
 ["commands", "cooldowns"].forEach(x => client[x] = new Collection());
-
 
 const loadCommands = (dir = "./commands/") => {
   readdirSync(dir).forEach(dirs => {
@@ -33,26 +30,7 @@ const loadEvents = (dir = "./events/") => {
   });
 };
 
-client.on('ready', () => {
-  let interval = setInterval(function() {
-      Gamedig.query({
-          type: "fivem",
-          host: "127.0.0.1",
-          port: "30120"
-      }).then((state) => {
-          client.user.setActivity(`${state.players.length} / ${state.maxplayers} Habitants En Ville`, {
-              type: 'WATCHING'
-          });
-      }).catch((error) => {
-          client.user.setActivity("❌ Serveur éteint ❌", {
-              type: 'WATCHING'
-          });
-      });
-  }, 5000);
-});
-
-
 loadCommands();
 loadEvents();
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);

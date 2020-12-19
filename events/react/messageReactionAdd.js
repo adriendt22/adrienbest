@@ -1,24 +1,43 @@
+const { MessageReaction } = require("discord.js");
+
 module.exports = (client, messageReaction, user) => {
   const message = messageReaction.message;
   const member = message.guild.members.cache.get(user.id);
   const emoji = messageReaction.emoji.name;
-  const channel = message.guild.channels.cache.find(c => c.id === '762733000176959518');
-  const bobSpeedRole = message.guild.roles.cache.get("788424588295274577");
-  const alienWarRole = message.guild.roles.cache.get("788424790976757760");
+  const channel = message.guild.channels.cache.find(c => c.id === '784473250167521330');
+  const photoRole = message.guild.roles.cache.get("788116884867776522");
+  const videoRole = message.guild.roles.cache.get("788117323260755968");
+  const fondRole = message.guild.roles.cache.get("788117858604285972");
+  const logoRole = message.guild.roles.cache.get("788118008321015809");
+  const introRole = message.guild.roles.cache.get("788118170015236117");
   if (member.user.bot) return;
 
-  if (["bobspeed", "alienwar"].includes(emoji) && message.channel.id === channel.id) {
-  switch (emoji) {
-    case "bobspeed":
-      member.roles.add(bobSpeedRole);
-      client.channels.cache.get('788436763651735593').send(`Le rôle ${bobSpeedRole.name} a été ajouté avec succès à ${user}!`);
-      break;
+  if(["photo", "camxra", "fond", "logo", "intro"].includes(emoji) && message.channel.id === channel.id){
+    switch (emoji) {
+      case "photo":
+        member.roles.add(photoRole);
+        client.channels.cache.get('788716620418646036').send(`Le rôle ${photoRole.name} a été ajouté avec succès à ${user}!`);
+        break;
 
-      case "alienwar":
-      member.roles.add(alienWarRole);
-      client.channels.cache.get('788436763651735593').send(`Le rôle ${alienWarRole.name} a été ajouté avec succès à ${user}!`);
-      break;
+        case "camxra":
+        member.roles.add(videoRole);
+        client.channels.cache.get('788716620418646036').send(`Le rôle ${videoRole.name} a été ajouté avec succès à ${user}!`);
+        break;
 
+        case "fond":
+        member.roles.add(fondRole);
+        client.channels.cache.get('788716620418646036').send(`Le rôle ${fondRole.name} a été ajouté avec succès à ${user}!`);
+        break;
+
+        case "logo":
+        member.roles.add(logoRole);
+        client.channels.cache.get('788716620418646036').send(`Le rôle ${logoRole.name} a été ajouté avec succès à ${user}!`);
+        break;
+
+        case "intro":
+        member.roles.add(introRole);
+        client.channels.cache.get('788716620418646036').send(`Le rôle ${introRole.name} a été ajouté avec succès à ${user}!`);
+        break;
     }
   }
 }

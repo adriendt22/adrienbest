@@ -15,7 +15,7 @@ module.exports.run = (client, message, args) => {
 
     message.delete();
 
-    client.channels.cache.get('763706320205381632').send(embed);
+    client.channels.cache.get('788716620418646036').send(embed);
 
 };
 

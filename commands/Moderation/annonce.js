@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
     .setColor("#000000")
     .setAuthor(`Annonce de ${member}`)
     .setDescription(arg)
-    .setThumbnail("https://i.imgur.com/TEl2ItS.png")
+    .setThumbnail("https://i.imgur.com/HNfSGe9.png")
     .setFooter(FOOTER, FOOTERI)
     .setTimestamp(new Date());
 
@@ -28,7 +28,7 @@ module.exports.help = {
   description: "Faire une annonce",
   cooldown: 10,
   usage: '<message>',
-  isUserAdmin1: false,
-  permissions: false,
+  isUserAdmin: false,
+  permissions: true,
   args: true
 };
